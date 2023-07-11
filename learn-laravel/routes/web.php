@@ -68,4 +68,4 @@ Route::post('/forgotPassword', [UserController::class, 'forgotPassword']);
 
 
 //--------------- Route for todo table using its controllers --------------------------------
-Route::resource('/todos', [TodoController::class,'index']);
+// Route::resource('/todos', [TodoController::class,'index']);
