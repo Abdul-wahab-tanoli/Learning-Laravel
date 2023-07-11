@@ -58,7 +58,7 @@ class UserController extends Controller
             Session::put('id', $user->id);
 
             //--------- custom log for mantaining the user logged info--------
-            Log::channel('customlog')->info('This User logged in successfully with id:: ' . $user->id . ' -- with ip:: ' . $_SERVER['REMOTE_ADDR'] . '   --- At Time:: ' . Carbon::now());
+            // Log::channel('customlog')->info('This User logged in successfully with id:: ' . $user->id . ' -- with ip:: ' . $_SERVER['REMOTE_ADDR'] . '   --- At Time:: ' . Carbon::now());
             return redirect('index')->withSuccess('Signed in');
         }
         $user = Auth::user();

@@ -54,7 +54,7 @@ Route::post('/register', [UserController::class, 'register']);
 //---------------------routes for login to view and post|save data
 Route::get('/login', function () {
     return view('login');
-})->name('login');
+})->name('get-login');
 Route::post('/login', [UserController::class, 'login'])->name('login');
 //---------------------routes for forgotPassword to view and post|save data
 Route::get('/forgotPassword', function () {
@@ -68,4 +68,4 @@ Route::post('/forgotPassword', [UserController::class, 'forgotPassword']);
 
 
 //--------------- Route for todo table using its controllers --------------------------------
-// Route::resource('/todos', [TodoController::class,'index']);
+Route::get('/todos', [TodoController::class,'index']);

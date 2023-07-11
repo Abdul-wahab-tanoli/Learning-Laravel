@@ -1,5 +1,5 @@
-@extends('frontend.layouts.main')
-@section('main-section')
+{{-- @extends('frontend.layouts.main') --}}
+{{-- @section('main-section') --}}
     <style>
         /* Include the padding and border in an element's total width and height */
         * {
@@ -197,4 +197,4 @@
     </body>
 
     </html>
-@endsection
+{{-- @endsection --}}
