@@ -46,6 +46,13 @@ Route::group(['middleware' => ['webguard']], function () {
     Route::get('/logout', [LogoutController::class, 'logout'])->name('logout');
 });
 
+//---------------------routes for viewing practice on bladeTemplateEngine ------------
+Route::get('/blade1',function(){
+    return view('bladeTemplateEngine.bladepractice1');
+});
+Route::get('/blade2',function(){
+    return view('bladeTemplateEngine.bladepractice2');
+});
 //---------------------routes for register to view and post|save data
 Route::get('/register', function () {
     return view('register');
