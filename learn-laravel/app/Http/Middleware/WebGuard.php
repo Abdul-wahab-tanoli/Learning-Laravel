@@ -25,8 +25,8 @@ class WebGuard
         } else {
             //--------- custom log for mantaining the user info for requesting an unauthorized request or URL--------
             Log::channel('customlog')->info(' unauthorized Page request from ip:: ' . $_SERVER['REMOTE_ADDR'] . '   --- At Time:: ' . Carbon::now());
-            abort(403, 'Unauthorized');
-            // return redirect('index')->withSuccess('Signed in');
+            // abort(403, 'Unauthorized');
+            return redirect('/login');
         }
     }
 }

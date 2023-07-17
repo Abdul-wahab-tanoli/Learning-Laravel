@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 {{-- ************************** Sub Directives Of bladeTemplateEngine **************** --}}
+
 <head>
     <title>Title</title>
     <!-- Required meta tags -->
@@ -44,8 +45,8 @@
 @endisset
 
             @empty($a)
-                    <h1>{{ 'the variable a is empty ' }}</h1>
-        @endempty
+    <h1>{{ 'the variable a is empty ' }}</h1>
+@endempty
 
 
             {{-- *************ForEAch Loop in bladeTemplateEngine********************* --}}
@@ -298,8 +299,8 @@
             <label for="">testing forEach in bladeTemplateEngine</label>
             <select class="form-control" name="" id="">
                                 @foreach ($countries as $country)
-            <option>{{ $country }}</option>
-            @endforeach
+<option>{{ $country }}</option>
+@endforeach
             </select>
             </div>
                 {{-- *************For Loop in bladeTemplateEngine********************* --}}
@@ -308,8 +309,8 @@
             <label for="">testing FOr LOOP in bladeTemplateEngine</label>
             <select class="form-control" name="" id="">
                         @for ($i = 0; $i < sizeof($countries); $i++)
-            <option>{{ $countries[$i] }}</option>
-            @endfor
+<option>{{ $countries[$i] }}</option>
+@endfor
             </select>
             </div>
 
@@ -330,21 +331,21 @@
             This is the first iteration.
             @endif --}}
 
-                @if ($loop->last)
-    This is the last iteration.
-    @endif
+                {{-- @if ($loop->last)
+This is the last iteration.
+@endif
 
                 <p>This is user {{ $user->id }}</p>
-        @endforeach
+        @endforeach --}}
 
-
+{{--
                 @foreach ($users as $user)
-        @foreach ($user->posts as $post)
-        @if ($loop->parent->first)
-        This is the first iteration of the parent loop.
-        @endif
-        @endforeach
-        @endforeach
+@foreach ($user->posts as $post)
+@if ($loop->parent->first)
+<div>This is the first iteration of the parent loop.</div>
+@endif
+@endforeach
+@endforeach --}}
 </div>
 
 

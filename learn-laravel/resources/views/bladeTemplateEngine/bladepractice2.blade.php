@@ -1,28 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Bootstrap 4 Template</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href={{ asset('blade_sources/css/bootstrap.css') }}>
-    <link rel="stylesheet" href={{ asset('blade_sources/css/style.css') }}>
-</head>
-
-<body>
-    @yield('header')
-
-
+@extends('bladeTemplateEngine.layout')
+@section('contentOfPage')
     <div id="banner" class="py-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-lg-6">
                     <div class="banner-title">
                         <h1 class="title">Some Heading Goes Here</h1>
-                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt quis,
-                            architecto quasi. Iste excepturi veniam ea maxime libero officia, nesciunt.</p>
+                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt quis, architecto
+                            quasi. Iste excepturi veniam ea maxime libero officia, nesciunt.</p>
                     </div>
                 </div>
             </div>
@@ -129,10 +114,4 @@
             </div>
         </div>
     </div>
-
-
-
-
-</body>
-
-</html>
+@endsection

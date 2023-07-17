@@ -44,14 +44,33 @@ Route::group(['middleware' => ['webguard']], function () {
     Route::get('/reviews', [ReviewController::class, 'index']);
     // ------------ for logout -----------------
     Route::get('/logout', [LogoutController::class, 'logout'])->name('logout');
-});
 
-//---------------------routes for viewing practice on bladeTemplateEngine ------------
-Route::get('/blade1',function(){
-    return view('bladeTemplateEngine.bladepractice1');
-});
-Route::get('/blade2',function(){
-    return view('bladeTemplateEngine.bladepractice2');
+
+    //---------------------routes for viewing practice on bladeTemplateEngine ------------
+    Route::get('/blade1', function () {
+        return view('bladeTemplateEngine.bladepractice1');
+    });
+    Route::get('/blade2', function () {
+        return view('OnePage.index');
+    });
+    // Route::get('/blade2',function(){
+    //     return view('bladeTemplateEngine.bladepractice2');
+    // });
+    Route::get('/banner', function () {
+        return view('bladeTemplateEngine.banner');
+    });
+    Route::get('/products', function () {
+        return view('bladeTemplateEngine.products');
+    });
+    Route::get('/gallery', function () {
+        return view('bladeTemplateEngine.gallery');
+    });
+    Route::get('/about', function () {
+        return view('bladeTemplateEngine.aboutUs');
+    });
+    Route::get('/contactUs', function () {
+        return view('bladeTemplateEngine.contactUs');
+    });
 });
 //---------------------routes for register to view and post|save data
 Route::get('/register', function () {
@@ -60,7 +79,7 @@ Route::get('/register', function () {
 Route::post('/register', [UserController::class, 'register']);
 //---------------------routes for login to view and post|save data
 Route::get('/login', function () {
-    return view('login');
+    return view('newLogin');
 })->name('get-login');
 Route::post('/login', [UserController::class, 'login'])->name('login');
 //---------------------routes for forgotPassword to view and post|save data
@@ -75,4 +94,4 @@ Route::post('/forgotPassword', [UserController::class, 'forgotPassword']);
 
 
 //--------------- Route for todo table using its controllers --------------------------------
-Route::get('/todos', [TodoController::class,'index']);
+Route::get('/todos', [TodoController::class, 'index']);

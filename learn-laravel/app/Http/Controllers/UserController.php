@@ -59,7 +59,7 @@ class UserController extends Controller
 
             //--------- custom log for mantaining the user logged info--------
             // Log::channel('customlog')->info('This User logged in successfully with id:: ' . $user->id . ' -- with ip:: ' . $_SERVER['REMOTE_ADDR'] . '   --- At Time:: ' . Carbon::now());
-            return redirect('index')->withSuccess('Signed in');
+            return redirect('/blade2')->withSuccess('Signed in');
         }
         $user = Auth::user();
         return redirect("login")->withSuccess('Login details are not valid');
